@@ -1,6 +1,6 @@
 {
   "name": "@samhuk/select",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Select UI Component",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
