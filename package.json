@@ -1,7 +1,7 @@
 {
   "name": "@samhuk/select",
   "version": "1.0.4",
-  "description": "Select UI Component",
+  "description": "A vanilla JS select UI Component",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
