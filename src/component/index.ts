@@ -56,12 +56,12 @@ export const createSelect = <TValue>(options: SelectOptions<TValue>): Select<TVa
   const expandButton = document.createElement('button')
   expandButton.type = 'button'
   expandButton.classList.add('button--white')
-  const downCaretIcon = document.createElement('i')
-  downCaretIcon.classList.add('fas')
-  downCaretIcon.classList.add('fa-angle-down')
+  const caretIcon = document.createElement('div')
+  caretIcon.classList.add('com-select__caret-icon')
+  caretIcon.textContent = '▼'
 
   element.appendChild(textInput.rendered.element)
-  expandButton.appendChild(downCaretIcon)
+  expandButton.appendChild(caretIcon)
   textInput.rendered.element.appendChild(expandButton)
 
   const close = () => {
@@ -69,8 +69,7 @@ export const createSelect = <TValue>(options: SelectOptions<TValue>): Select<TVa
     document.removeEventListener('click', onAnywhereClick)
     window.removeEventListener('resize', onWindowResize)
     optionList.hide()
-    downCaretIcon.classList.add('fa-angle-down')
-    downCaretIcon.classList.remove('fa-angle-up')
+    caretIcon.textContent = '▼'
   }
 
   const onOptionListChildElementClick = (el: HTMLElement) => {
@@ -136,8 +135,7 @@ export const createSelect = <TValue>(options: SelectOptions<TValue>): Select<TVa
       return
 
     select.isOpen = true
-    downCaretIcon.classList.remove('fa-angle-down')
-    downCaretIcon.classList.add('fa-angle-up')
+    caretIcon.textContent = '▲'
     if (optionList == null)
       optionList = createOptionList({ optionDataList: select.optionDataList })
     optionList.updateOptionDataList(select.optionDataList)
