@@ -5,7 +5,7 @@ import Nav from '../common/nav'
 export const render = () => (
   <div className="showcase">
     <Nav navItems={[
-      { to: 'my-component', text: 'MyComponent' },
+      { to: 'select', text: 'Select' },
     ]}
     />
     <Outlet />

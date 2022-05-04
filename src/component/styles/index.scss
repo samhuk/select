@@ -1,8 +1,62 @@
-// This is the entrypoint scss file for styling the component.
+$primary-background-color: #fafafa;
+$border-color: #ccc;
+$border: 1px solid $border-color;
+$border-radius: 5px;
 
-.com-my-component {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #eee;
-  padding: 5px;
+@import '~@samhuk/text-input/src/component/styles/index.scss';
+
+.com-select {
+  position: relative;
+
+  &.unavailable-value-selected {
+    input {
+      border: 1px solid red;
+    }
+  }
+
+  &.left-label-position {
+    button {
+      top: 3px;
+    }
+  }
+
+  button {
+    position: absolute;
+    right: 3px;
+    top: 25px;
+    bottom: 3px;
+    background-color: transparent;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.com-select__option-list {
+  border: $border;
+  border-radius: $border-radius;
+  padding: 10px;
+  font-size: 14px;
+  padding: 0;
+  position: absolute;
+  box-sizing: border-box;
+  overflow-y: auto;
+  background-color: $primary-background-color;
+
+  &>div {
+    padding: 7px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    user-select: none;
+
+    &.selected {
+      background-color: darken($primary-background-color, 5);
+      border: $border;
+    }
+
+    &:hover {
+      background-color: darken($primary-background-color, 5);
+    }
+  }
 }

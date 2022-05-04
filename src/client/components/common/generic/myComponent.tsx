@@ -1,14 +1,15 @@
 import React from 'react'
-import { MyComponent, MyComponentOptions, createMyComponent } from '../../../../component'
+import { createSelect } from '../../../../component'
+import { SelectOptions, Select } from '../../../../component/types'
 import Com from './base'
 
 /**
- * Thin wrapper around the MyComponent component
+ * Thin wrapper around the Select component
  */
-export const render = (props: { options: MyComponentOptions, setComponent?: (component: MyComponent) => void }) => (
+export const render = (props: { options: SelectOptions, setComponent?: (component: Select) => void }) => (
   <Com
     componentOptions={props.options}
-    createComponent={createMyComponent}
+    createComponent={createSelect}
     setComponent={props.setComponent}
     name="component"
   />

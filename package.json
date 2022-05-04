@@ -1,7 +1,7 @@
 {
-  "name": "my-component",
+  "name": "@samhuk/select",
   "version": "1.0.0",
-  "description": "my-component description",
+  "description": "Select UI Component",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -23,27 +23,17 @@
   },
   "author": "",
   "license": "MIT",
+  "repository": "https://github.com/samhuk/select",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
-    "drag-resistant-click-listener": "^1.0.1"
+    "@samhuk/text-input": "^1.0.2"
   },
   "devDependencies": {
-    "esbuild-plugin-sass": "^1.0.1",
-    "esbuild-sass-plugin": "^2.2.3",
-    "postcss": "^8.4.6",
-    "postcss-modules": "^4.3.0",
-    "rimraf": "^3.0.2",
-    "chokidar-debounced": "^1.0.2",
-    "concurrently": "^7.0.0",
-    "connect-livereload": "^0.6.1",
-    "livereload": "^0.9.3",
-    "express": "^4.17.3",
-    "jsdom": "^19.0.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-router": "^6.2.1",
-    "react-router-dom": "^6.2.1",
     "@types/connect-livereload": "^0.6.0",
     "@types/express": "^4.17.13",
+    "@types/jsdom": "^16.2.14",
     "@types/livereload": "^0.9.1",
     "@types/lodash.merge": "^4.6.6",
     "@types/node": "^17.0.19",
@@ -51,13 +41,27 @@
     "@types/react-router": "^5.1.18",
     "@typescript-eslint/eslint-plugin": "^5.12.1",
     "@typescript-eslint/parser": "^5.12.1",
-    "@types/jsdom": "^16.2.14",
+    "chokidar-debounced": "^1.0.2",
+    "concurrently": "^7.0.0",
+    "connect-livereload": "^0.6.1",
     "env-cmd": "^10.1.0",
     "esbuild": "^0.14.23",
+    "esbuild-plugin-sass": "^1.0.1",
+    "esbuild-sass-plugin": "^2.2.3",
     "eslint": "^8.9.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jsx-a11y": "^6.5.1",
+    "express": "^4.17.3",
+    "jsdom": "^19.0.0",
+    "livereload": "^0.9.3",
+    "postcss": "^8.4.6",
+    "postcss-modules": "^4.3.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router": "^6.2.1",
+    "react-router-dom": "^6.2.1",
+    "rimraf": "^3.0.2",
     "typescript": "^4.5.5"
   }
 }
